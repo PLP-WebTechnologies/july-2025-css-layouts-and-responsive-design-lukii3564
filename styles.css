@@ -1,0 +1,146 @@
+/* =========================
+   Global Styles
+========================= */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+/* =========================
+   Sidebar
+========================= */
+.sidebar {
+  width: 220px;
+  background: #1e1e2f;
+  color: #fff;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100%;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ff6600;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav li {
+  margin: 1rem 0;
+}
+
+.sidebar nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: block;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.sidebar nav a:hover {
+  background: #ff6600;
+}
+
+/* =========================
+   Main Content
+========================= */
+.main-content {
+  margin-left: 220px;
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Header */
+.main-header {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.main-header h1 {
+  margin: 0;
+  color: #333;
+}
+
+/* =========================
+   Courses Grid (Dashboard Cards)
+========================= */
+.courses-section h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.course-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Different Course Colors */
+.html { background: #e34c26; }
+.css { background: #264de4; }
+.js { background: #f0db4f; color: #333; }
+.py { background: #3776ab; }
+.react { background: #61dbfb; color: #333; }
+.git { background: #f34f29; }
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+    padding: 1rem;
+  }
+  
+  .main-content {
+    margin-left: 180px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
